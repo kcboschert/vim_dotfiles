@@ -157,6 +157,8 @@ let g:ale_set_signs = 0                   " Disable signs showing in the gutter 
 let g:ale_linters_explicit = 1            " Only run linters that are explicitly listed below
 let g:ale_linters = {}
 let g:ale_linters['puppet'] = ['puppetlint']
+" enable shellcheck linting for bash & sh files
+let g:ale_linters['sh'] = ['shellcheck']
 if filereadable(expand(".rubocop.yml"))
   let g:ale_linters['ruby'] = ['rubocop']
 endif
